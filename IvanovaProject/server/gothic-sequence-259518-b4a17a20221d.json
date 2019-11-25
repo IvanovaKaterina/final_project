@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gothic-sequence-259518",
+  "private_key_id": "b4a17a20221d012b3aaa612406832b829af65209",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQWoCvnZzjMjvg\n/AHcRJisqmBnUUxIWsCmQhBxe1LJeH9y1qqQUZ0Z21ZQW0qu/5Ig0fCHvAx34Pc9\ni1Guc4Nd7OMQa5CKWyjNKYHX6twd0L/vICWaJ/YoS4jAqXJ82RXIJgginFQYNBaZ\n8KhDXnIG8qL2yNouPY3eGqQ3DYoNDD5hgJVJVQX8dNRMXpBXv+gwnFJFweyRyAMi\nc3m6s1URMMui/Z+4d++WyWaYwMs1objHzpT0L2efsZr42Id1fueDdfEGT47e3spp\nHUnv4OASTIC465WR0+bMkQALJhXVovFuS9z2au0foV2htyw73JDJP+as5ZkTnIsk\n4kQjLtX9AgMBAAECggEAHxSVFD1qgSDF+miVXXaVINK0mUzxGG0DRnnd6pPHNHsn\nZencXTVzfj8wJ8IKiMLimUc//nuAj6RtNU7SUzfzjYAQGiu1jtIM6tfpgNxN1BvG\n+eSdf1q9N2MXJghQ5gtbGrWDqqgPymGAyptx+kS9NUieIzqwg0vW3R4zx2ubX5ki\nULEBY8+7dk3Qyv8RaHauCqbWPoOwTz+IptQbJYmBbYpTLxi46vfojos3eYkfeJlC\n2iStGbtpZyHm90ls2ILX0xFcXR6OoexeIevmRHjvHVjcLG4gTtQiMuCi11YMPz4U\nTfbQpQt2AOMicwe5Gr9CLktLTad5OJh9J6Il/4/PGQKBgQDnfgmg+6abUHXWhn8s\nei/2jQYVcw7WjXu077fEix3tjqpfPu9cRu+i0+wgsCbkKVQ5OAB8JVzxNPzpnIr5\nL2D+SN3fVhZIvnsHoa0v9ftRLMC7knITCj/JehOZgfvJuJ72Gt+iz4V2fencvDJ5\nfmKacoYwrQPBB1gPRiZLj26cGQKBgQDmaVnzh3oaaT2r2URVLk+PJSbA+WC+ErRU\n5GyPvilygbnx4dKSgcCqE3ASIDsH4sxsNNCZCu56W0zvY9jrlR8PnPuTzNV6uK/b\nC7rbd5p7HMXRM4iX4Pw/ptNtuXzYoeaHJPdAeRP7PbqVqgoB1DPsYwHdGLFRc1YY\nCHd3GG1FhQKBgFEIeJxmmtqRXr56lDfgibuXgAKwJQiLvDsJEt31CMPohdETebxm\nhGoOHwEOSH7jzLy+0sSiW5d/weyQxMEXia9ZmHkebGyIaQ6x1KsOQywWK109lTr/\nAncniYbZzma9fr+Nhq06UXC6AMwpAM4wpJmF711IoyDFzliCaNNYYRK5AoGBAIRE\nE9vleGVy5nEg7sYLKKaeiAmc3jkeWaCl49/8JKTT7V756Dwr+eJn+ByfneNgAUNY\naiqAiPd6M8b0RVCvML5wukZU/nNNU73llOVpWie0E6aM86tj/sm3RYWmRhHBlqkb\nwkejeaHvBI3np4j3PLtE9ovqIdgE4nY3XgTi489VAoGAKGlayxDqrqkVTQYSEkf0\n/h416g3QOez7iGzvGvqZHt/C4klTEtXcF/ww5Zh8jvVckeMQrzbLmEBZfuwZt4W/\nePx0CHPfqr+ePrXuhrwyHMIQK/s1LyYNB3yoMfhHiXvGJa2JxaefdPHblK9r8kPj\nVsZLmtZ9vsEjgTRxoI+RK4Q=\n-----END PRIVATE KEY-----\n",
+  "client_email": "katya-ivanova@gothic-sequence-259518.iam.gserviceaccount.com",
+  "client_id": "102541467867765609814",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/katya-ivanova%40gothic-sequence-259518.iam.gserviceaccount.com"
+}
