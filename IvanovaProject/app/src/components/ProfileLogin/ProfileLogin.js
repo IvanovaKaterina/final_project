@@ -1,11 +1,11 @@
 import React from 'react';
-import './ProfileLogin.less';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { Button, Alert } from 'react-bootstrap';
-import { store } from '../../redux/store/configureStore';;
+import { store } from '../../redux/store/configureStore';
+import './ProfileLogin.css';
 
 const mapStateToProps = state => ({
-    user: state.userAuth.user,
+  user: state.userAuth.user,
 })
 
 class ProfileLogin extends React.Component {
@@ -19,40 +19,40 @@ class ProfileLogin extends React.Component {
       showAlert: false,
     };
     }
-   changeLoginData(url) {
-      let user = {};
-      user = {
-        userId: localStorage.getItem('authUser'),
-        email: this.state.email,
-        password: this.state.passwordNew,
-      }
-        fetch(url, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          mode: 'cors',
-          body: JSON.stringify(user)
-        })
-        .then(response => {
-          if(!response.ok) {
-            throw new Error (response.statusText)
-          }
-          return response;
-        }).then(()=>this.setState({showAlert: true}));
-      store.dispatch({type:'USER_FETCH_DATA_SUCCESS', user});       
-  }
- checkEmptyEmail(e){
-      if (e.target.value === '') {
-        this.setState({errorInputEmail: true});
-      } else this.setState({errorInputEmail: false});
+  changeLoginData(url) {
+    let user = {};
+    user = {
+      userId: localStorage.getItem('authUser'),
+      email: this.state.email,
+      password: this.state.passwordNew,
     }
-  checkEmptyNewPass(e){
-      if (e.target.value === '') {
-        this.setState({errorInputNewPass: true});
-      } else this.setState({errorInputNewPass: false});
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors',
+      body: JSON.stringify(user)
+    })
+    .then(response => {
+      if(!response.ok) {
+        throw new Error (response.statusText)
+      }
+      return response;
+    }).then(()=>this.setState({ showAlert: true }));
+    store.dispatch({type:'USER_FETCH_DATA_SUCCESS', user});       
   }
- render() {
+  checkEmptyEmail(e){
+    if (e.target.value === '') {
+      this.setState({errorInputEmail: true});
+    } else this.setState({errorInputEmail: false});
+  }
+  checkEmptyNewPass(e){
+    if (e.target.value === '') {
+      this.setState({errorInputNewPass: true});
+    } else this.setState({errorInputNewPass: false});
+  }
+  render() {
     return(
       <>
         <style type="text/css">
@@ -75,7 +75,7 @@ class ProfileLogin extends React.Component {
           </Alert>
           <div className="form-group">
               <label htmlFor="profileEmail">
-                Введите новый e-mail: {this.state.errorInputEmail ? <img src='../error.png' className="errorImg"/> : null}
+                Введите новый e-mail: {this.state.errorInputEmail ? <img src='../error.png' className="errorImg" alt='error'/> : null}
               </label>
               <input type="email" className="form-control profile-form" id="profileEmail" aria-describedby="emailHelp" placeholder="Enter new email" onChange={(e) => {
                 this.setState({email:e.target.value})
@@ -83,7 +83,7 @@ class ProfileLogin extends React.Component {
           </div>
           <div className="form-group">
               <label htmlFor="profileNewPassword">
-                Введите новый пароль: {this.state.errorInputNewPass ? <img src='../error.png' className="errorImg"/> : null}
+                Введите новый пароль: {this.state.errorInputNewPass ? <img src='../error.png' className="errorImg" alt='error'/> : null}
               </label>
               <input type="password" className="form-control profile-form" id="profileNewPassword" placeholder="Repeat password" onChange={(e)=>{
                 this.setState({passwordNew:e.target.value})

@@ -1,15 +1,16 @@
 import React from 'react';
-import './ProfilePersonal.less';
 import { connect } from 'react-redux';
-import { userFetchData } from '../../redux/actions/index';
+import { userFetchData } from '../../redux/reducers/userAuth';
 import { Button, Alert } from 'react-bootstrap';
 import { store } from '../../redux/store/configureStore';
+import './ProfilePersonal.css';
+
 const mapStateToProps = state => ({
   user: state.userAuth,
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchUserData: url => {dispatch(userFetchData(url))},
+  fetchUserData: url => dispatch(userFetchData(url))
 })
 
 class ProfilePersonal extends React.Component {

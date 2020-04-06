@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { userLogedIn } from '../../redux/reducers/userAuth';
 import Footer from '../Footer'
-import { store } from '../../redux/store/configureStore';
-import './MainLayout.less';
+import './MainLayout.css';
 
-
-const mapStateToProps = state => ({
-  isAuth: state.userAuth,
+const mapDispatchToProps = dispatch => ({
+  userLogedIn: () => dispatch(userLogedIn())
 })
-  
+
 const MainLayout = (props) => {
-  useEffect(() => {
-    if (localStorage.getItem('authUser')) store.dispatch({type: 'USER_LOG_IN'})
-  }, []);
+  if (localStorage.getItem('authUser')) props.userLogedIn();
   return(
     <div className="mycontainer">
       <div className="wrapper">
@@ -24,4 +21,4 @@ const MainLayout = (props) => {
 }
 
 
-export default connect(mapStateToProps)(MainLayout);
+export default connect(null, mapDispatchToProps)(MainLayout)

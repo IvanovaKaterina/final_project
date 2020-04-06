@@ -1,7 +1,11 @@
 import React from 'react';
 import ProfileRegistryInputs from '../ProfileRegistryInputs';
 import { connect } from 'react-redux';
-import './ServiceRegistry.less';
+import './ServiceRegistry.css';
+
+const mapStateToProps = state => ({
+  isSubmit: state.submitRegistry
+})
 
 const ServiceRegistry = (props) => (
   <div className="row">
@@ -19,8 +23,5 @@ const ServiceRegistrySubmit = () => {
   )
 }
 
-const mapStateToProps = state => ({
-  isSubmit: state.isSubmit
-})
 
 export default connect(mapStateToProps)(ServiceRegistry);

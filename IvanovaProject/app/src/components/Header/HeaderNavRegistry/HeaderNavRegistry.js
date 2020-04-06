@@ -1,7 +1,7 @@
 import React from 'react';
-import './HeaderNavRegistry.less';
-import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Modal } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import './HeaderNavRegistry.css';
 
 class HeaderNavRegistry extends React.Component {
   constructor(props) {
@@ -69,7 +69,7 @@ class HeaderNavRegistry extends React.Component {
   render() {
     return(
       <>
-        <a href = "#" className="header-nav-link header-nav-linkSmall col-md-auto" onClick={this.handleCloseReg.bind(this)}>
+        <a href = "#" className="header-nav-link header-nav-linkSmall col-md-auto" onClick={this.handleShowReg.bind(this)}>
           Зарегистрироваться
         </a>
         <Modal show={this.state.showReg} onHide={this.handleCloseReg.bind(this)}>

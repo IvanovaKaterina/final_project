@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, Alert } from 'react-bootstrap';
 import { store } from '../../../redux/store/configureStore';
 import 'bootstrap/dist/css/bootstrap.css';
-import './HeaderNavLogin.less';
+import './HeaderNavLogin.css';
 
 class HeaderNavLogin extends React.Component {
     constructor(props) {

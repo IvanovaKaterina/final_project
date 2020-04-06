@@ -1,13 +1,13 @@
 import React from 'react';
-import './ProfileRegistryInputs.less';
 import { connect } from "react-redux";
 import { Button, Alert } from 'react-bootstrap';
+import './ProfileRegistryInputs.css';
 
 const mapStateToProps = state => ({
-  serviceType: state.inputType,
-  serviceName: state.inputName,
-  serviceId: state.inputId,
-  isSubmit: state.isSubmit,
+  serviceType: state.inputService.typeservice,
+  serviceName: state.inputService.nameservice,
+  serviceId: state.inputService.idservice,
+  isSubmit: state.submitRegistry,
   user: state.userAuth.user,
 })
 
@@ -83,13 +83,13 @@ class ServiceRegistryInputs extends React.Component {
     if (!localStorage.getItem("authUser")) {inputs = 
     <>
       <div className="form-group">
-        <label htmlFor="servicePersonNameRegistry">Ваше имя:{this.state.errorInputName ? <img src='../error.png' className="errorImg"></img> : null}</label>
+        <label htmlFor="servicePersonNameRegistry">Ваше имя:{this.state.errorInputName ? <img src='../error.png' className="errorImg" alt='error'/> : null}</label>
         <input type="text" className="form-control" id="servicePersonNameRegistry" onChange={(e) => {
           this.setState({name: e.target.value})
           this.checkEmptyName(e)}}/>
       </div>
       <div className="form-group">
-        <label htmlFor="servicePersonPhoneRegistry">Ваш номер телефона:{this.state.errorInputPhone ? <img src='../error.png' className="errorImg"></img> : null}</label>
+        <label htmlFor="servicePersonPhoneRegistry">Ваш номер телефона:{this.state.errorInputPhone ? <img src='../error.png' className="errorImg" alt='error'/> : null}</label>
         <input type="text" className="form-control" id="servicePersonPhoneRegistry" onChange={(e) => {
           this.setState({phone: e.target.value})
           this.checkEmptyPhone(e)}}/>
@@ -125,16 +125,16 @@ class ServiceRegistryInputs extends React.Component {
           <label htmlFor="serviceNameRegistry">Название услуги:</label>
           <input type="text" className="form-control" id="serviceNameRegistry" value={this.props.serviceName} readOnly/>
         </div>
+        {inputs}
         <div className="form-group">
           <label htmlFor="serviceDateRegistry">
-            Выберите ориентировочную дату записи:{this.state.errorInputDate ? <img src='../error.png' className="errorImg"/>: null}
+            Выберите ориентировочную дату записи:{this.state.errorInputDate ? <img src='../error.png' className="errorImg" alt='error'/>: null}
           </label>
           <input type="datetime-local" className="form-control" id="serviceDateRegistry" onChange={(e) => {
             this.setState({date: e.target.value})
             this.checkEmptyDate(e)}}/>
         </div>
-        {inputs}
-          <Button variant="orangeButton" onClick={()=>{
+          <Button variant="orangeButton" onClick={() => {
             if (!this.state.errorInputName && !this.state.errorInputPhone && !this.state.errorInputDate && !localStorage.getItem("authUser")) {
               this.sendGuestData(this.state.date, this.state.name, this.state.phone, this.state.serviceId)}
             if (localStorage.getItem("authUser")) {

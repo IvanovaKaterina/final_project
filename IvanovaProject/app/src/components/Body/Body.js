@@ -1,5 +1,5 @@
 import React from 'react';
-import './Body.less';
+import './Body.css';
 
 const Body = () => {
     return (

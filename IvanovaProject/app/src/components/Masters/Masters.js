@@ -1,5 +1,5 @@
 import React from 'react';
-import './Masters.less';
+import './Masters.css';
 
 class Masters extends React.Component {
   render() {
